@@ -579,6 +579,14 @@ input:checked + .slider::before {
     .button--next:active {
         background-color: var(--blue-300);
     }
+
+    .button--back:active {
+        color: var(--blue-950);
+    }
+
+    .button--confirm:active {
+        background-color: var(--blue-300);
+    }
 }
 
 @media only screen and (max-width: 1024px) {
