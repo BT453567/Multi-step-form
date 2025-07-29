@@ -1,0 +1,688 @@
+:root {
+
+    /* Primary */
+
+    --blue-950: hsl(213, 96%, 18%);
+    --purple-600: hsl(243, 100%, 62%);
+    --blue-300: hsl(228, 100%, 84%);
+    --blue-200: hsl(206, 94%, 87%);
+    --red-500: hsl(354, 84%, 57%);
+
+    /* Neutral */
+
+    --grey-500: hsl(231, 11%, 63%);
+    --purple-200: hsl(229, 24%, 87%);
+    --blue-100: hsl(218, 100%, 97%);
+    --blue-50: hsl(231, 100%, 99%);
+    --white: hsl(0, 100%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--blue-100);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    outline: none;
+    text-align: inherit;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utility Classes */
+
+.heading-1 {
+    
+}
+
+.heading-2 {
+    font-size: 2rem;
+    color: var(--blue-950);
+}
+
+.heading-3 {
+    font-size: 1.4rem;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* custom */
+
+label {
+    color: var(--blue-950);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+input[type="search"],
+input[type="number"] {
+    background-color: white;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--purple-200);
+    border-radius: 10px;
+    width: 100%;
+    color: var(--blue-950);
+}
+
+input::placeholder {
+    color: var(--grey-500); 
+}
+
+input:focus {
+    border: 1px solid var(--purple-600);
+}
+
+.blue-text {
+    color: var(--blue-950);
+}
+
+.grey-text {
+    color: var(--grey-500);
+}
+
+.purple-text {
+    color: var(--purple-600);
+}
+
+.button--next {
+    background-color: var(--blue-950);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.button--back {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--grey-500);
+    transition: color 0.3s ease;
+}
+
+.button--confirm {
+    background-color: var(--purple-600);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.button--change {
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--grey-500);
+    transition: color 0.3s ease;
+    text-decoration: underline;
+    align-self: flex-start;
+    width: auto;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+/* main */
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+/* multi step form */
+
+.multi-step-form {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 70rem;
+    min-height: 40rem;
+}
+
+/* multi step form - aside */
+
+.multi-step-form__aside {
+    background-image: url('../assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    padding-block: 3rem;
+    border-radius: 10px;
+    gap: 2.5rem;
+}
+
+.aside__step-wrapper {
+    gap: 1rem;
+}
+
+.aside__step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    font-weight: 700;
+}
+
+.aside__step-number.active {
+    background-color: var(--blue-200);
+    color: var(--blue-950);
+    border: 1px solid var(--blue-200);
+}
+
+.aside__step-text {
+    color: var(--grey-500);
+}
+
+.aside__your-info-text {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* multi step form - form content */
+
+.multi-step-form__form-content {
+    padding-top: 3rem;
+    padding-inline: 4rem;
+    padding-bottom: 1rem;
+}
+
+.form {
+    height: 100%;
+}
+
+.form-group {
+    gap: 0.5rem;
+}
+
+.step__top {
+    gap: 3rem;
+}
+
+.step__input-group {
+    gap: 2rem;
+}
+
+.form-content__wrapper {
+    display: none;
+    position: relative;
+    height: 100%;
+}
+
+.form-content__wrapper.active {
+    display: flex;
+}
+
+.form-content__step {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.step__heading-wrapping {
+    gap: 1rem;
+}
+
+.error {
+    display: none;
+    color: var(--red-500);
+    font-weight: 700;
+}
+
+.error.active {
+    display: inline;
+}
+
+input.input-error {
+    border: 1px solid var(--red-500);
+}
+
+/* step 2 */
+
+.step__plan-group {
+    gap: 3rem;
+}
+
+.plan-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.plan-card {
+    padding: 1rem;
+    padding-block: 1.4rem;
+    border: 1px solid var(--purple-200);
+    border-radius: 10px;
+    gap: 3rem;
+    transition: all 0.3s ease;
+}
+
+.plan-card__image {
+    height: 3rem;
+    width: 3rem;
+}
+
+.plan-card__text-wrapper {
+    gap: 0.5rem;
+}
+
+input[type="radio"]:checked + .plan-card,
+.plan-card:has(input[type="radio"]:checked) {
+    background-color: var(--blue-50);
+    border-color: var(--purple-600);      /* Dark blue border */
+}
+
+/* billing toggle */
+
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: var(--blue-50);
+  border-radius: 10px;
+}
+
+.billing-label {
+  font-weight: 500;
+  color: var(--grey-500);
+  transition: color 0.3s ease;
+}
+
+.billing-label.active {
+  color: var(--blue-950);
+}
+
+/* billing toggle style */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: hsl(213, 96%, 35%);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* free months toggle */
+
+.free-months {
+    display: none;
+}
+
+.free-months.active {
+    display: block;
+}
+
+/* addon step */
+
+.add-ons {
+    gap: 1rem;
+}
+
+.addon-card {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    border: 1px solid var(--purple-200);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addon-card__left {
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.addon-card__right {
+    align-items: center;
+}
+
+.addon-card__text-group {
+    gap: 0.5rem;
+}
+
+/* checkbox */
+
+.addon-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.addon-card .custom-checkmark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--purple-200);
+    border-radius: 4px;
+    display: inline-block;
+    background-color: white;
+    transition: background-color,border-color 0.3s ease;  
+}
+
+.addon-card input:checked + .custom-checkmark {
+    background-color: var(--purple-600);
+    background-image: url('../assets/images/icon-checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+    border-color: var(--purple-600);
+}
+
+.addon-card:has(input:checked) {
+  background-color: var(--purple-200);
+  border-color: var(--purple-600);
+}
+
+/* summary */
+
+.summary__items-wrapper {
+    padding: 2rem;
+    background-color: var(--blue-50);
+}
+
+.summary__plan {
+    gap: 1rem;
+}
+
+.plan__group {
+    gap: 0.5rem;
+}
+
+.plan-hr {
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: var(--purple-200);
+    margin-top: 1.5rem;
+}
+
+.summary__addons {
+    gap: 1rem;
+}
+
+.summary__total-wrapper {
+    padding: 2rem;
+}
+
+.summary__total {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--purple-600);
+}
+
+/* thank-you screen */
+
+.thank-you__wrapper {
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you__wrapper-inner {
+    align-items: center;
+    
+}
+
+.thank-you__heading {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.thank-you__text {
+    line-height: 1.5;
+    margin-top: 1rem;
+    max-width: 30rem;
+    text-align: center;
+}
+
+@media (hover:hover) {
+    
+    .button--next:hover {
+        background-color: var(--blue-300);
+    }
+
+    .button--back:hover {
+        color: var(--blue-950);
+    }
+
+    .button--confirm:hover {
+        background-color: var(--blue-300);
+    }
+
+    .plan-card:hover {
+        cursor: pointer;
+        border: 1px solid var(--purple-600);
+    }
+}
+
+@media (hover:none) {
+
+    .button--next:active {
+        background-color: var(--blue-300);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .body {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .heading-2 {
+        font-size: 1.75rem;
+    }
+
+    .heading-3 {
+        font-size: 1.2rem;
+    }
+
+    .form-text {
+        font-size: 1.2rem;
+    }
+
+    .form-group {
+        gap: 0.2rem;
+    }
+
+    .multi-step-form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 1fr;
+        padding: 0;
+    }
+
+    .multi-step-form__aside {
+        border-radius: 0;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        padding-block: 2rem;
+    }
+
+    .aside__step-info-wrapper {
+        display: none;
+    }
+
+    .multi-step-form__form-content {
+        padding: 0;
+    }
+
+    .form-content__wrapper {
+        background-color: var(--blue-100);
+    }
+
+    .form-content__step {
+        position: absolute;
+        top: -7rem;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        gap: 2rem;
+        height: calc(100% + 7rem);
+    }
+
+    .thank-you__wrapper {
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .step__top,
+    .thank-you__wrapper-inner {
+        margin-inline: 2rem;
+        border-radius: 10px;
+        background-color: var(--white);
+        padding: 2rem;
+    }
+
+    .thank-you__wrapper-inner {
+        padding-block: 5rem;
+    }
+
+    .thank-you__image {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .step__button-wrapper {
+        background-color: var(--white);
+        padding: 1rem;
+    }
+
+    .plan-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plan-card {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .billing-toggle {
+        padding-block: 1.5rem;
+        margin: 0;
+    }
+
+
+}
